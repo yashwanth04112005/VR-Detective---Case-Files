@@ -13,6 +13,9 @@ public class ExaminationUI : MonoBehaviour
 
     private Coroutine hideCoroutine;
 
+    /// <summary>Returns true when the examination panel is visible.</summary>
+    public bool IsPanelOpen => examinationPanel != null && examinationPanel.activeSelf;
+
     private void Start()
     {
         HidePanel();

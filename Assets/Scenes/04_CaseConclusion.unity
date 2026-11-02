@@ -1740,6 +1740,8 @@ MonoBehaviour:
   submitButton: {fileID: 1736614949}
   verdictText: {fileID: 47335524}
   mainMenuButton: {fileID: 1458217054}
+  selectedColor: {r: 0.8, g: 0.6, b: 0.1, a: 1}
+  defaultColor: {r: 0.15, g: 0.15, b: 0.15, a: 1}
 --- !u!1 &879875062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,6 +3216,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526482023}
   m_CullTransparentMesh: 1
+--- !u!1 &1593933411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593933413}
+  - component: {fileID: 1593933412}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1593933412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593933411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3379e55cd60ffec4b88eb860e3e278f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sounds:
+  - name: ambient_office
+    clip: {fileID: 8300000, guid: e553d22db59582e44ad09a20e9d47ef9, type: 3}
+    volume: 0.1
+    loop: 1
+  - name: ambient_archive
+    clip: {fileID: 8300000, guid: 633e94e77a7ee194294ed5a6f49930ca, type: 3}
+    volume: 0.1
+    loop: 1
+  - name: suspense_bgm
+    clip: {fileID: 8300000, guid: ad6f4138322642538eb25a1ae08dd337, type: 3}
+    volume: 0.28
+    loop: 1
+  - name: sfx_clue_found
+    clip: {fileID: 8300000, guid: 2de37b0fddda62d4caa7e47b9cdad01e, type: 3}
+    volume: 0.55
+    loop: 0
+  - name: sfx_usb_found
+    clip: {fileID: 8300000, guid: fd7b621e48336dc4e90ee2b815470e1c, type: 3}
+    volume: 0.62
+    loop: 0
+  - name: sfx_page_turn
+    clip: {fileID: 8300000, guid: 060d5ffa9306cad4cad4a59e0155dd03, type: 3}
+    volume: 0.42
+    loop: 0
+  - name: sfx_ui_click
+    clip: {fileID: 8300000, guid: 2ef4f5e1b0309f141b8bd5a50c6da4a7, type: 3}
+    volume: 0.32
+    loop: 0
+  - name: sting_case_solved
+    clip: {fileID: 8300000, guid: c36f8ae47bfd162439046baf0db07536, type: 3}
+    volume: 0.65
+    loop: 0
+  - name: sting_unresolved
+    clip: {fileID: 8300000, guid: 73fbe551eb980a544b31dabe5d9ebe5c, type: 3}
+    volume: 0.55
+    loop: 0
+--- !u!4 &1593933413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593933411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625443868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,3 +4450,4 @@ SceneRoots:
   - {fileID: 1636463248}
   - {fileID: 877484725}
   - {fileID: 549582361}
+  - {fileID: 1593933413}

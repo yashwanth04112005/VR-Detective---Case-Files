@@ -782,6 +782,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534946729}
   m_CullTransparentMesh: 1
+--- !u!1 &703876379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703876381}
+  - component: {fileID: 703876380}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &703876380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703876379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3379e55cd60ffec4b88eb860e3e278f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sounds:
+  - name: ambient_office
+    clip: {fileID: 8300000, guid: e553d22db59582e44ad09a20e9d47ef9, type: 3}
+    volume: 0.1
+    loop: 1
+  - name: ambient_archive
+    clip: {fileID: 8300000, guid: 633e94e77a7ee194294ed5a6f49930ca, type: 3}
+    volume: 0.1
+    loop: 1
+  - name: suspense_bgm
+    clip: {fileID: 8300000, guid: ad6f4138322642538eb25a1ae08dd337, type: 3}
+    volume: 0.28
+    loop: 1
+  - name: sfx_clue_found
+    clip: {fileID: 8300000, guid: 2de37b0fddda62d4caa7e47b9cdad01e, type: 3}
+    volume: 0.55
+    loop: 0
+  - name: sfx_usb_found
+    clip: {fileID: 8300000, guid: fd7b621e48336dc4e90ee2b815470e1c, type: 3}
+    volume: 0.62
+    loop: 0
+  - name: sfx_page_turn
+    clip: {fileID: 8300000, guid: 060d5ffa9306cad4cad4a59e0155dd03, type: 3}
+    volume: 0.42
+    loop: 0
+  - name: sfx_ui_click
+    clip: {fileID: 8300000, guid: 2ef4f5e1b0309f141b8bd5a50c6da4a7, type: 3}
+    volume: 0.32
+    loop: 0
+  - name: sting_case_solved
+    clip: {fileID: 8300000, guid: c36f8ae47bfd162439046baf0db07536, type: 3}
+    volume: 0.65
+    loop: 0
+  - name: sting_unresolved
+    clip: {fileID: 8300000, guid: 73fbe551eb980a544b31dabe5d9ebe5c, type: 3}
+    volume: 0.55
+    loop: 0
+--- !u!4 &703876381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703876379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "HOW TO PLAY\r\n\r\nCASE: THE 11:47 MYSTERY\r\n\r\nDr. Vale has mysteriously disappeared from his office. Something doesn't add up, and it's up to you to uncover the truth.\r\n\r\nCONTROLS\r\n\u2022 W, A, S, D - Move\r\n\u2022 Mouse - Look around\r\n\u2022 E - Examine objects\r\n\u2022 TAB -Open or close your detective journal\r\n\u2022 ESC - Close the examination panel\r\n\r\nYOUR MISSION\r\nExplore the office, search for evidence, and piece together the events surrounding Dr. Vale's disappearance. Observe your surroundings carefully, record what you discover, and use your deductions to uncover the truth.\r\n\r\nEvery detail could matter. Look closely, think carefully, and trust the evidence-not your assumptions."
+  m_text: "HOW TO PLAY\r\n\r\nCASE: THE 11:47 MYSTERY\r\n\r\nDr. Vale has mysteriously disappeared from his office. Something doesn't add up, and it's up to you to uncover the truth.\r\n\r\nCONTROLS\r\n\u2022 W, A, S, D - Move\r\n\u2022 Mouse - Look around\r\n\u2022 Left Shift - Sprint\r\n\u2022 Left Ctrl - Crouch\r\n\u2022 Space - Jump\r\n\u2022 E - Examine objects\n\u2022 F - Continue\n\u2022 TAB -Open or close your detective journal\r\n\u2022 ESC - Close the examination panel\r\n\r\nYOUR MISSION\r\nExplore the office, search for evidence, and piece together the events surrounding Dr. Vale's disappearance. Observe your surroundings carefully, record what you discover, and use your deductions to uncover the truth.\r\n\r\nEvery detail could matter. Look closely, think carefully, and trust the evidence-not your assumptions."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1690,11 +1771,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_fontSizeMin: 14
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -2286,3 +2367,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1839640265}
   - {fileID: 943129900}
+  - {fileID: 703876381}
